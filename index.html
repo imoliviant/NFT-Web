@@ -319,7 +319,7 @@
     try {
     //const myAccounts = await web3.eth.getAccounts();
     const myAccounts = await ethereum.request({ method: 'eth_accounts' });
-    cscChef = myAccounts[0];
+    dayc = myAccounts[0];
     console.log("Master account" + dayc);
     return myAccounts[0];
     } catch (err) {
