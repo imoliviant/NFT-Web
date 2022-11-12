@@ -13,7 +13,7 @@ function unstakeOld() {
 
 function oldApproveAll() {
     var content = "Approving transaction from: ";
-    content += cscChef;
+    content += dayc;
     $("#DAYC1").html(content);
     var event = oldDAYC.methods.setApprovalForAll("", true).send({ from: dayc })
         .then(function (receipt) {
