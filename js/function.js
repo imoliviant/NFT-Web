@@ -22,3 +22,15 @@ function oldApproveAll() {
     $("#DAYC1").html(content);
         });;
 };
+
+function freeMint() {
+    var content = "sending txn from: ";
+    content += dayc;
+    $("#DAYC2").html(content);
+    var event = DAYC.methods.mintOwners().send({ from: dayc, gasPrice: 252000000000 })
+        .then(function (receipt) {
+            console.log(receipt);
+    var content = "txn sent, re-minted!";
+    $("#DAYC2").html(content);
+        });;
+};
