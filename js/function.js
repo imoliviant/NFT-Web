@@ -14,13 +14,11 @@ function unstakeOld() {
 function oldApproveAll() {
     var content = "Approving transaction from: ";
     content += cscChef;
-    $("#lang3").html(content);
+    $("#DAYC1").html(content);
     var event = oldDAYC.methods.setApprovalForAll("", true).send({ from: dayc })
         .then(function (receipt) {
             console.log(receipt);
-    var content = "Approved!: ";
-            //alert("Done. You can stake it now!")
-    content += JSON.stringify(receipt.transactionHash);
-    $("#lang3").html(content);
+    var content = "Approved!: Can proceed for FreeMint!:)";
+    $("#DAYC1").html(content);
         });;
 };
