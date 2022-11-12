@@ -1035,6 +1035,12 @@ p {
 	font-size: 18px;
 }
 
+.js-btn:hover{
+	background-color: var(--primary-color);
+	color: white;
+	box-shadow: 2px 4px 10px 0px black;
+}
+
 input{
     cursor: normal;
 	padding: 2px;
