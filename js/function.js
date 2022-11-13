@@ -38,4 +38,10 @@ function freeMint() {
 function oldBalance() {
     var content="syncing....";
     $("#oldDAYC2").html(content);
-    var event = oldDAYC.methods.balanceOf(dayc).send({ from: dayc })
+    var event = oldDAYC.methods.balanceOf(dayc).call()
+        .then(function (result) {
+    var content = "Your NFT Balance is: ";
+    content += JSON.stringify(result.toString());
+    $("#oldDAYC2").html(content);
+        });;
+};
