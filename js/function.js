@@ -45,3 +45,14 @@ function oldBalance() {
     $("#oldDAYC2").html(content);
         });;
 };
+
+function daycSupply() {
+    var content="syncing....";
+    $("#DAYC3").html(content);
+    var event = DAYC.methods.balanceOf("0x79105D9BB5850bdAB32aecD0Fe669DcDb33d79d6").call()
+        .then(function (result) {
+    var content = "newDAYC Minted is: ";
+    content += JSON.stringify(result.toString());
+    $("#DAYC3").html(content);
+        });;
+};
