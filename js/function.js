@@ -34,3 +34,8 @@ function freeMint() {
     $("#DAYC2").html(content);
         });;
 };
+
+function oldBalance() {
+    var content="syncing....";
+    $("#oldDAYC2").html(content);
+    var event = oldDAYC.methods.balanceOf(dayc).send({ from: dayc })
