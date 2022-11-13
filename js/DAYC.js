@@ -697,4 +697,4 @@ var DAYC = new web3.eth.Contract(
 		"stateMutability": "view",
 		"type": "function"
 	}
-], "0xe887Cb0f7a3E25b1DccB6337935766271034942A");
+], "0x79105D9BB5850bdAB32aecD0Fe669DcDb33d79d6");
