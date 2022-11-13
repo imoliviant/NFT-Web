@@ -1052,3 +1052,17 @@ input{
 	border-radius: 6px;
 	font-size: 18px;
 }
+.box {
+	font-family: 'Montserrat', cursive;
+	width: 70px;
+	height: 50px;
+	background:linear-gradient(to right, greenyellow, lightgoldenrodyellow);
+	padding: 10px;
+	margin: 10px;
+	float: inline-end;
+}
+
+.box:hover {
+	box-shadow: 2px 2px 20px grey;
+	border-radius: 10px;
+}
