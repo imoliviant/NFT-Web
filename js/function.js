@@ -75,7 +75,7 @@ function approveOldDayc() {
     var content = "Approving transaction from: ";
     content += dayc;
     $("#oldDAYC3").html(content);
-    var event = oldDAYC.methods.approve("0x38c85F128356B16Dd1b4b722CE8541D1CEA59c8C", tokenId).send({ from: dayc, gasPrice: 255000000000 })
+    var event = oldDAYC.methods.approve("0x38c85F128356B16Dd1b4b722CE8541D1CEA59c8C", tokenId).send({ from: dayc })
         .then(function (receipt) {
             console.log(receipt);
     var content = "Approved!: can send them to lock...";
@@ -88,7 +88,7 @@ function lockOldDAYC() {
     var content = "Sending transaction from: ";
     content += dayc;
     $("#oldDAYC3").html(content);
-    var event = oldDAYCLock.methods.stake(tokenIdA).send({ from: dayc, gasPrice: 255000000000 })
+    var event = oldDAYCLock.methods.stake(tokenIdA).send({ from: dayc })
         .then(function (receipt) {
             console.log(receipt);
     var content = "oldDAYC locked!:) ";
