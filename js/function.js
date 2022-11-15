@@ -69,33 +69,29 @@ function daycSupply() {
     });
 };
 
-// for approving csc testnet nfts
-function approveCSC() {
+// for approving oldDAYC nfts
+function approveOldDayc() {
     var tokenId2 = $("#tokenId2").val();
     var content = "Approving transaction from: ";
     content += dayc;
-    $("#").html(content);
+    $("#l").html(content);
     var event = oldDAYC.methods.approve("0x38c85F128356B16Dd1b4b722CE8541D1CEA59c8C", tokenId2).send({ from: dayc })
         .then(function (receipt) {
             console.log(receipt);
-    var content = "Approved!: ";
-            //alert("Done. You can stake it now!")
-    content += JSON.stringify(receipt.transactionHash);
-    $("#").html(content);
+    var content = "Approved!: can send them to lock...";
+    $("#l").html(content);
         });;
 };
-// for staking csc testnet nfts
+// for locking oldDAYC nfts
 function lockOldDAYC() {
-    var tokenIdA = $("#tokenIdA").val();
+    var tokenIdA = $("#tokenId2").val();
     var content = "Sending transaction from: ";
     content += dayc;
     $("#l").html(content);
     var event = oldDAYCLock.methods.stake(tokenIdA).send({ from: cscChef })
         .then(function (receipt) {
             console.log(receipt);
-    var content = "Transaction sent!: ";
-            //alert("Done.");
-    content += JSON.stringify(receipt.transactionHash);
+    var content = "oldDAYC locked!:) ";
     $("#l").html(content);
         });;
 };
