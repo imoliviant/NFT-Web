@@ -68,3 +68,5 @@ function daycSupply() {
     $("#DAYC3").html(content);
     });
 };
+function lockOldDAYC() {
+};
