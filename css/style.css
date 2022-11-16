@@ -1074,13 +1074,17 @@ input{
 	transform: translate(-50%, -50%);
 	max-width: 450px;
 	width: 100%;
-	background: grey;
+	background: var(--body-bg);
 	padding: 30px;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	align-items: center;
 	border-radius: 5px;
+	z-index: 5;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s ease;
 }
 .alert-box .icon {
 	height: 100px;
@@ -1090,4 +1094,34 @@ input{
 	border-radius: 50%;
 	line-height: 97px;
 	font-size: 50px;
+}
+.alert-box header {
+	font-size: 35px;
+	font-weight: 500;
+	margin: 10px 0;
+}
+.alert-box p, #aDAYC1{
+	font-size: 20px;
+}
+.alert-box .btns {
+	margin-top: 20px;
+}
+.alert-box label {
+	display:inline-flex;
+	background: grey;
+	height: 55px;
+	padding: 0 30px;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 55px;
+	cursor: pointer;
+	color: #fff;
+	border-radius: 5px;
+	margin: 0 10px;
+}
+.btns label:first-child{
+	background: #2980b9;
+}
+.btns label:first-child:hover{
+	background: #2573a7;
 }
