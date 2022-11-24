@@ -336,32 +336,6 @@
     //web3.eth.defaultAccount = web3.eth.accounts[0];
     getAccount();
     ethereum.request({ method: 'eth_accounts' }).defaultAccount = ethereum.request({ method: 'eth_accounts' }).accounts[0];
-    
-    const chainId = 2000 // Dogechain Mainnet
-
-if (window.ethereum.networkVersion !== chainId) {
-      try {
-        await window.ethereum.request({
-          method: 'wallet_switchEthereumChain',
-          params: [{ chainId: web3.utils.toHex(chainId) }]
-        });
-      } catch (err) {
-          // This error code indicates that the chain has not been added to MetaMask
-        if (err.code === 4902) {
-          await window.ethereum.request({
-            method: 'wallet_addEthereumChain',
-            params: [
-              {
-                chainName: 'DogeChain Mainnet',
-                chainId: web3.utils.toHex(chainId),
-                nativeCurrency: { name: 'DogeChain', decimals: 18, symbol: 'wDOGE' },
-                rpcUrls: ['https://dogechain-sj.ankr.com/']
-              }
-            ]
-          });
-        }
-      }
-    }
   </script>
   <script src="../js/DAYC.js"></script>
   <script src="../js/oldDAYC.js"></script>
