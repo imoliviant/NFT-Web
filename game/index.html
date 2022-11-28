@@ -13,6 +13,28 @@
     </div>
     <button onclick="randomware()"><i class='bx bxs-dice-1'>play</i></button>
 
+    <script>
+      
+    web3 = new Web3(window.ethereum);
+    ethereum.request({ method: 'eth_requestAccounts' });
+    var dayc;
+    const getAccount = async () => {
+    try {
+    //const myAccounts = await web3.eth.getAccounts();
+    const myAccounts = await ethereum.request({ method: 'eth_accounts' });
+    dayc = myAccounts[0];
+    console.log("Master account" + dayc);
+    return myAccounts[0];
+    } catch (err) {
+          console.log(err);
+    }
+    }
+    //getAccount();
+    //web3.eth.defaultAccount = web3.eth.accounts[0];
+    getAccount();
+    ethereum.request({ method: 'eth_accounts' }).defaultAccount = ethereum.request({ method: 'eth_accounts' }).accounts[0];
+  
+    </script>
     <script src="./js/index.js"></script>
   </body>
 </html>
