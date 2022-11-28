@@ -1,6 +1,6 @@
 // raw javascript index for dayc game :)
 function randomware() {
-    var content = "woof...trying your luck."
+    var content = "woof...trying your luck.";
     $("#rgame").html(content);
     var event = Math.floor(Math.random() * 100)
     console.log(event);
