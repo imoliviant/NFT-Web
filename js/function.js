@@ -70,6 +70,20 @@ function oldBalance() {
         });;
 };
 
+function singleMint() {
+    var tokenID = $("#BDKCID").val();
+    var content = "reminting txn from: ";
+    content += dayc;
+    $("#BDKC3").html(content);
+    var event = BDKC.methods.singleMint(tokenID).send({ from: dayc })
+        .then(function (receipt) {
+            console.log(receipt);
+    var content = "reminted!";
+            //alert("Done. You can stake it now!")
+    $("#BDKC3").html(content);
+        });;
+};
+
 // function daycSupply() {
 //    var content="syncing....";
 //    $("#DAYC3").html(content);
