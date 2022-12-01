@@ -27,7 +27,7 @@ function oldBdkcApproveAll() {
     var content = "Approving transaction from: ";
     content += dayc;
     $("#DAYC1").html(content);
-    var event = oldBDKC.methods.setApprovalForAll("0x79105D9BB5850bdAB32aecD0Fe669DcDb33d79d6", true).send({ from: dayc,  gasPrice: 258000000000 })
+    var event = oldBDKC.methods.setApprovalForAll("0x870FB39328958d9D363DDb88c2e6a4A32a5BEF11", true).send({ from: dayc,  gasPrice: 258000000000 })
         .then(function (receipt) {
             console.log(receipt);
     var content = "Approved!: Can proceed for FreeMint!:)";
