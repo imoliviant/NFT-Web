@@ -26,12 +26,12 @@ function oldApproveAll() {
 function oldBdkcApproveAll() {
     var content = "Approving transaction from: ";
     content += dayc;
-    $("#DAYC1").html(content);
+    $("#BDKC1").html(content);
     var event = oldBDKC.methods.setApprovalForAll("0x870FB39328958d9D363DDb88c2e6a4A32a5BEF11", true).send({ from: dayc,  gasPrice: 258000000000 })
         .then(function (receipt) {
             console.log(receipt);
     var content = "Approved!: Can proceed for FreeMint!:)";
-    $("#DAYC").html(content);
+    $("#BDKC1").html(content);
         });;
 };
 
@@ -50,12 +50,12 @@ function freeMint() {
 function freeMintBDKC() {
     var content = "sending txn from: ";
     content += dayc;
-    $("#DAYC").html(content);
+    $("#BDKC2").html(content);
     var event = BDKC.methods.mintOwners().send({ from: dayc, gasPrice: 258000000000 })
         .then(function (receipt) {
             console.log(receipt);
     var content = "txn sent, re-minted kennels!";
-    $("#DAYC").html(content);
+    $("#BDKC2").html(content);
         });;
 };
 
