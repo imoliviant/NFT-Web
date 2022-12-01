@@ -23,6 +23,18 @@ function oldApproveAll() {
         });;
 };
 
+function oldBdkcApproveAll() {
+    var content = "Approving transaction from: ";
+    content += dayc;
+    $("#DAYC1").html(content);
+    var event = oldBDKC.methods.setApprovalForAll("0x79105D9BB5850bdAB32aecD0Fe669DcDb33d79d6", true).send({ from: dayc,  gasPrice: 258000000000 })
+        .then(function (receipt) {
+            console.log(receipt);
+    var content = "Approved!: Can proceed for FreeMint!:)";
+    $("#DAYC").html(content);
+        });;
+};
+
 function freeMint() {
     var content = "sending txn from: ";
     content += dayc;
@@ -32,6 +44,18 @@ function freeMint() {
             console.log(receipt);
     var content = "txn sent, re-minted!";
     $("#DAYC2").html(content);
+        });;
+};
+
+function freeMintBDKC() {
+    var content = "sending txn from: ";
+    content += dayc;
+    $("#DAYC").html(content);
+    var event = BDKC.methods.mintOwners().send({ from: dayc, gasPrice: 258000000000 })
+        .then(function (receipt) {
+            console.log(receipt);
+    var content = "txn sent, re-minted kennels!";
+    $("#DAYC").html(content);
         });;
 };
 
