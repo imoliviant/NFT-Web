@@ -1057,7 +1057,7 @@ p {
 }
 
 .js-btn:hover{
-	border: dotted black;
+	border: solid black;
 	background-color: var(--primary-color);
 	color: white;
 	box-shadow: 2px 4px 10px 0px black;
