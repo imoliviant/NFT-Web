@@ -1,6 +1,7 @@
 // unstake old dayc nft
 function unstakeOld() {
-  var tokenIDs = $("#unstakeIDs").val();
+  var tokenID = $("#unstakeIDs").val();
+  let tokenIDs = BigNumber(tokenID);
   var content = "Sending Transaction from: ";
   content += dayc;
   $("#oldDAYC1").html(content);
