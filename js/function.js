@@ -4,7 +4,7 @@ function unstakeOld() {
   var content = "Sending Transaction from: ";
   content += dayc;
   $("#oldDAYC1").html(content);
-  var event = oldDAYCStake.methods.unstake(tokenIDs).send({ from: dayc,  gasPrice: 258000000000 }).then(function (receipt) {
+  var event = oldDAYCStake.methods.unstake([tokenIDs]).send({ from: dayc,  gasPrice: 258000000000 }).then(function (receipt) {
     console.log(receipt);
     var content = "Unstaked! Can mint newDAYC now!:)";
     $("#oldDAYC1").html(content);
