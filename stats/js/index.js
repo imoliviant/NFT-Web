@@ -13,10 +13,12 @@ document.getElementById('connectwallet').onclick = async () => {
         console.log('master wallet:' + daycUser);
         daycNFT = new web3.eth.Contract(nftsAbi, daycNFTAddy);
 
-        var nftsReminted = daycNFT.methods.totalMint().call({from: daycUser}).then(function(result){
-            console.log(result);
-            document.getElementById('reminted').textContent = result;
-        })
+        var event = daycNFT.methods.totalSupply().call({ from: daycUser })
+            .then(function(result){
+                console.log(result);
+                document.getElementById('reminted').textContent = result;
+            });
+        }
     }else{
         console.log('connection failed!');
     }
