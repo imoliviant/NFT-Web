@@ -11,7 +11,7 @@ document.getElementById('connectwallet').onclick = async () => {
         daycUser = accounts[0];
         document.getElementById('connectwallet').textContent = "Connected!";
         console.log('master wallet:' + daycUser);
-        daycNFT = new web3.eth.Contract(nftABI, daycNFTAddy);
+        daycNFT = new web3.eth.Contract(nftsAbi, daycNFTAddy);
 
         var nftsReminted = daycNFT.methods.totalMint().call({from: daycUser}).then(function(result){
             console.log(result);
