@@ -12,6 +12,11 @@ document.getElementById('connectwallet').onclick = async () => {
         document.getElementById('connectwallet').textContent = "Connected!";
         console.log('master wallet:' + daycUser);
         daycNFT = new web3.eth.Contract(nftABI, daycNFTAddy);
+
+        var nftsReminted = daycNFT.methods.totalSupply().call({from: daycUser}).then(function(result){
+            console.log(result);
+            document.getElementById('reminted').textContent = result;
+        })
     }else{
         console.log('connection failed!');
     }
