@@ -18,8 +18,5 @@ document.getElementById('connectwallet').onclick = async () => {
                 console.log(result);
                 document.getElementById('reminted').textContent = result;
             });
-        }
-    }else{
-        console.log('connection failed!');
     }
 }
