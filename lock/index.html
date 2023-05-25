@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAYC - LOCK</title>
+</head>
+
+<body>
+    <input id="tokenid" placeholder="enter the tokenId">
+    <button onclick="lockID()" id="lockbtn">Lock</button>
+    <script>
+        web3 = new Web3(window.ethereum);
+        ethereum.request({ method: 'eth_requestAccounts' });
+        var dayc;
+        const getAccount = async () => {
+            try {
+                //const myAccounts = await web3.eth.getAccounts();
+                const myAccounts = await ethereum.request({ method: 'eth_accounts' });
+                dayc = myAccounts[0];
+                console.log("Master account" + dayc);
+                return myAccounts[0];
+            } catch (err) {
+                console.log(err);
+            }
+        }
+        //getAccount();
+        //web3.eth.defaultAccount = web3.eth.accounts[0];
+        getAccount();
+        ethereum.request({ method: 'eth_accounts' }).defaultAccount = ethereum.request({ method: 'eth_accounts' }).accounts[0];
+    </script>
+    <script src="../js/lock.js"></script>
+    <script src="../js/oldDAYC.js"></script>
+</body>
+
+</html>
