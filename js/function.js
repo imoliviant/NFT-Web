@@ -52,10 +52,10 @@ function freeMintBDKC() {
     var content = "sending txn from: ";
     content += dayc;
     $("#BDKC2").html(content);
-    var event = BDKC.methods.mintOwners().send({ from: dayc, gasPrice: 258000000000 })
+    var event = BDKC.methods.mint().send({ from: dayc, gasPrice: 258000000000, value: 15000000000000000000 })
         .then(function (receipt) {
             console.log(receipt);
-    var content = "txn sent, re-minted kennels!";
+    var content = "txn sent, minted kennels!";
     $("#BDKC2").html(content);
         });;
 };
