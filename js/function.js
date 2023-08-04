@@ -49,10 +49,11 @@ function freeMint() {
 };
 
 function freeMintBDKC() {
+    var nftAmount = $("#bdkcMintAmount").val();
     var content = "sending txn from: ";
     content += dayc;
     $("#BDKC2").html(content);
-    var event = BDKC.methods.mint().send({ from: dayc, gasPrice: 258000000000, value: 15000000000000000000 })
+    var event = BDKC.methods.mint(nftAmount).send({ from: dayc, gasPrice: 258000000000, value: 15000000000000000000 * nftAmount })
         .then(function (receipt) {
             console.log(receipt);
     var content = "txn sent, minted kennels!";
