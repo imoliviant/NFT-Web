@@ -53,9 +53,9 @@ function freeMintBDKC() {
     var content = "sending txn from: ";
     content += dayc;
     $("#BDKC2").html(content);
-    var event1 = BDKC.methods.getPrice(dayc).call({ from: dayc }).then(function(result){
+    var event1 = bdkcMinter.methods.cost(num).call({ from: dayc }).then(function(result){
       // value = 15000000000000000000;
-      var event = BDKC.methods.mintRandomNFT(/*nftAmount*/).send({ from: dayc, gasPrice: 258000000000, value: result  * nftAmount }).then(function (receipt) {
+      var event = bdkcMinter.methods.pay(nftAmount).send({ from: dayc, gasPrice: 258000000000, value: result  * nftAmount }).then(function (receipt) {
         console.log(receipt);
         var content = "txn sent, minted kennels!";
         $("#BDKC2").html(content);
