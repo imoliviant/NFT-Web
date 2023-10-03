@@ -218,4 +218,4 @@ var bdkcMinter = new web3.eth.Contract([
 		"stateMutability": "view",
 		"type": "function"
 	}
-], "0x39b7E64d0AB7F496436EEA8398e41E472D1CA70F")
+], "0xbDc80e1876FC39e2AF84d1cc8307676e1314D51C")
