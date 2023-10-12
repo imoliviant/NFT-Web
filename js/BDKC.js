@@ -721,4 +721,5 @@ var BDKC = new web3.eth.Contract(
 			"stateMutability": "view",
 			"type": "function"
 		}
-	], "0x544870Cc7fF94A50e507262B98060f6b15835Fde");
+	], "0x544870Cc7fF94A50e507262B98060f6b15835Fde"
+);
